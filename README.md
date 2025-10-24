@@ -21,9 +21,9 @@
 
 ## 安装指南
 1. 克隆仓库到本地: git clone [repository-url] cd [repository-directory]
-3. 使用Visual Studio打开解决方案文件(.sln)。
-4. 在`SchoolContext.cs`中更新数据库连接字符串以匹配您的数据库配置。
-5. 运行迁移命令以创建数据库：
+2. 使用Visual Studio打开解决方案文件(.sln)。
+3. 在`SchoolContext.cs`中更新数据库连接字符串以匹配您的数据库配置。
+4. 运行迁移命令以创建数据库：
 
 ## 如何使用
 1. 启动应用程序后，输入正确的用户名和密码登录。
