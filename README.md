@@ -1,51 +1,45 @@
-# 学生管理系统
+# 🎓 学生管理系统（Student Management System）
 
-## 概述
-学生管理系统是一个基于Windows Forms的应用程序，使用C#语言开发，并利用Entity Framework Core作为ORM工具与SQL Server数据库交互。该系统旨在为学校提供一种简单的方式来管理学生的个人信息，包括添加、编辑、删除和查询学生数据。
+![.NET](https://img.shields.io/badge/.NET-Windows%20Forms-blue)
+![C#](https://img.shields.io/badge/Language-C%23-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-## 主要特性
-- 用户登录验证：支持默认用户名和密码登录，支持记住用户设置。
-- 学生信息管理：
+> 一个基于 C# 和 Windows Forms 的学生信息管理系统，支持增删改查、分页显示与数据筛选，适合 .NET 初学者学习 CRUD 操作、UI 设计与数据库交互。
+
+本系统使用 **Entity Framework Core** 作为 ORM 框架，与 **SQL Server** 数据库进行交互，界面采用现代化设计风格，具备良好的用户体验。
+
+---
+
+## 📋 功能特性
+
+- ✅ **用户登录验证**：支持默认用户名密码登录，可选择“记住我”自动登录。
+- ✅ **学生信息管理**：
   - 添加新学生
-  - 编辑现有学生的信息
+  - 编辑现有学生信息
   - 删除学生记录
-  - 查看所有学生列表并支持分页显示
-- 数据过滤：可以根据班级、院系或关键字（姓名或学号）来筛选学生列表。
-- 美观的UI设计：应用了多种美化技术，如渐变背景、圆角矩形、按钮样式自定义等，提升了用户体验。
+  - 查看所有学生列表并支持分页浏览
+- ✅ **智能数据筛选**：支持按班级、院系或关键字（姓名/学号）快速搜索。
+- ✅ **美观的 UI 界面**：采用渐变背景、圆角控件、自定义按钮样式，提升视觉体验。
+- ✅ **数据持久化**：所有操作均保存至 SQL Server 数据库，重启不丢失。
 
-## 技术栈
-- C#
-- Windows Forms (.NET)
-- Entity Framework Core
-- SQL Server
+---
 
-## 安装指南
-1. 克隆仓库到本地: git clone [repository-url] cd [repository-directory]
-2. 使用Visual Studio打开解决方案文件(.sln)。
-3. 在`SchoolContext.cs`中更新数据库连接字符串以匹配您的数据库配置。
-4. 运行迁移命令以创建数据库：
+## ⚙️ 技术栈
 
-##导入数据库
-打开 SSMS，连接到自己的 SQL Server。
-右键点击 “数据库” → 选择 “还原数据库(R)...”
-在“还原数据库”窗口中：
-选择 “设备(D)” → 点击右侧的 “...” 按钮
-点击“添加”，浏览并选择你发给他的 .bak 文件
-确认“目标数据库”名称（会自动填入）
-点击 “确定”，等待还原完成。
-还原成功后，新数据库就会出现在他们的“数据库”列表中。
+| 类别 | 技术 |
+|------|------|
+| 开发语言 | C# |
+| 开发框架 | Windows Forms (.NET) |
+| 数据访问 | Entity Framework Core |
+| 数据库 | Microsoft SQL Server |
+| 开发工具 | Visual Studio, SSMS |
 
-## 如何使用
-1. 启动应用程序后，输入正确的用户名和密码登录。
-2. 在主界面中，您可以查看所有学生列表，进行搜索、添加、编辑或删除操作。
-3. 使用顶部的搜索框可以快速查找特定的学生信息。
-4. 点击“新增学生”按钮来添加新的学生记录。
-5. 双击表格中的某一行可以编辑该学生的详细信息。
-6. 提示：本学生管理系统主要用于练习编程思维，重点在于理解代码的逻辑结构与实现思路。
+---
 
+## 📥 如何运行本项目
 
-## 贡献指南
-我们欢迎任何形式的贡献！如果您发现了bug或者有新的想法，请随时提交issue或pull request。
+### 1. 克隆项目到本地
 
-## 许可证
-本项目遵循MIT License。详情请参见[LICENSE](LICENSE)文件。
+```bash
+git clone https://github.com/frefsd/StudentManagementSystem.git
+cd StudentManagementSystem
