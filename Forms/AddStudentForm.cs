@@ -189,7 +189,7 @@ namespace StudentManagementSystem.Forms
 
             //检查数据库中是否已存在该学号
             using var context = new SchoolContext();
-            bool exists = await context.Students
+            bool exists = await context.Student
                 .AnyAsync(s => s.StudentId == studentId);
             //判断
             if (exists)

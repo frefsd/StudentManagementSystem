@@ -310,7 +310,7 @@ namespace StudentManagementSystem
                 using var context = new SchoolContext();
 
                 //保存到allStudent中并绑定
-                allStudent = await context.Students.ToListAsync();
+                allStudent = await context.Student.ToListAsync();
 
                 //填充院系到下拉框（去重）
                 var departments = allStudent
@@ -441,7 +441,7 @@ namespace StudentManagementSystem
                 {
                     //保存到数据库
                     using var context = new SchoolContext();
-                    context.Students.Add(addStudentForm.Student);
+                    context.Student.Add(addStudentForm.Student);
                     await context.SaveChangesAsync();
 
                     //刷新主界面
@@ -493,7 +493,7 @@ namespace StudentManagementSystem
             {
                 //4.从数据库中删除
                 using var context = new SchoolContext();
-                context.Students.Remove(student);
+                context.Student.Remove(student);
                 await context.SaveChangesAsync();
 
                 //刷新表格
@@ -543,7 +543,7 @@ namespace StudentManagementSystem
                 {
                     //4.保存数据到数据库
                     using var context = new SchoolContext();
-                    var studentInDb = await context.Students.FindAsync(student.Id);
+                    var studentInDb = await context.Student.FindAsync(student.Id);
 
                     if (studentInDb == null)
                     {

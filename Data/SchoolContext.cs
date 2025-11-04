@@ -5,7 +5,7 @@ namespace StudentManagementSystem.Data
 {
     public class SchoolContext : DbContext
     {
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Student> Student { get; set; }
 
         //配置数据库连接
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
